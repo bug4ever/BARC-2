@@ -7,6 +7,7 @@ class_name Player
 @export var speed = 130.0
 @export var jump_velocity = -300.0
 
+var enabled: bool = true
 var player: MiniGameManager.PlayerData
 var device_id: int = -1
 
@@ -15,7 +16,9 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	if device_id < 0:
+	if device_id < 0 or not enabled:
+		velocity.x = 0
+		move_and_slide()
 		return
 
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://sthxlfv7nudu"]
+
+[ext_resource type="FontFile" uid="uid://dbwlqw16a8hce" path="res://assets/fonts/minecraft-font/MinecraftBold-nMK1.otf" id="1_u3awm"]
+[ext_resource type="Script" path="res://scripts/player_ui.gd" id="2_2qys3"]
+
+[node name="Player UI" type="Label"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.904297, 0.060051, 0.060051, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("1_u3awm")
+theme_override_font_sizes/font_size = 20
+text = "P1 TIME"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_2qys3")
