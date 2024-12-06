@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+
 @export var player_color_rect: ColorRect
 
 @export var speed = 130.0
@@ -8,6 +9,7 @@ class_name Player
 
 var player: MiniGameManager.PlayerData
 var device_id: int = -1
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -30,12 +32,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
-	
+
+
 func construct(player: MiniGameManager.PlayerData):
 	player_color_rect.color = player.color
 	self.player = player
 	
 	Input.joy_connection_changed.connect(_on_joy_connection_changed.unbind(2))
+	_on_joy_connection_changed()
 	
 	
 func _on_joy_connection_changed():
