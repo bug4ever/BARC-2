@@ -1,0 +1,14 @@
+{
+  "title": "Speedrunners",
+  "description": "A simple counting game with friends written in Godot!",
+  "banner": "./banner.png",
+  "date": "12/6/2024",
+  "developers": ["Ben", "Ralph"],
+  "engine": "Godot",
+  "min_players": 2,
+  "max_players": 4,
+  "builds": {
+    "windows": "./windows/Tutorial Game.exe",
+    "macos": "./macos/Tutorial Game.command"
+  }
+}
